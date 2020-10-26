@@ -78,6 +78,7 @@ export default {
         .then(response => {
           this.projects.push(response.data)
           this.newProject = ''
+          this.$router.go()
         })
         .catch(error => this.setError(error, 'Cannot create project'))
     },
